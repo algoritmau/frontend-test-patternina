@@ -1,0 +1,103 @@
+@import './variables'
+@import './mixins'
+
+html
+  font-size: 62.5%
+  
+html,
+body
+  padding: 0
+  margin: 0
+  font-family: var(--blog-typeface)
+  font-weight: 400
+  line-height: 1.6
+
+body
+  background: var(--color-background)
+  color: var(--color-black)
+  font-size: 1.6rem
+
+*
+  box-sizing: border-box
+  margin: 0
+
+strong
+  font-weight: 900
+
+a
+  text-decoration: none
+
+ul
+  list-style: none
+  padding: 0
+  margin: 0
+
+h1,
+h2,
+h3,
+h4
+  font-family: var(--blog-typeface)
+  font-weight: 900
+  font-style: normal
+  letter-spacing: -0.04rem
+
+h2
+  font-size: clamp(2rem, 7vw, 3rem)
+  line-height: 128%
+  margin-block-end: 0.8rem
+  color: var(--color-black)
+  overflow-wrap: break-word
+  line-height: 144%
+
+h3
+  font-size: clamp(1.9rem, 5vw, 2.2rem)
+
+blockquote
+  padding: 2.4rem
+  width: 88%
+  margin: 0 auto
+  border-radius: 12px
+  background: lighten(#000, 80%)
+
+a:hover
+  text-decoration: underline
+
+img
+  max-width: 100%
+  display: block
+
+*::selection
+  background: var(--color-accent-blue)
+  color: var(--color-background-alt)
+
+/* Custom scrollbar styles */
+body::-webkit-scrollbar
+  width: 12px
+
+html
+  scrollbar-width: thin
+  scrollbar-color: #5e6dd0 var(--color-background-alt)
+
+body::-webkit-scrollbar-track
+  background: lavender
+
+body::-webkit-scrollbar-thumb
+  background-color: #5e6dd0 
+  border-radius: 6px
+  border: 3px solid lavender
+
+table
+  border-collapse: collapse
+  font-size: 1.4rem
+
+th,
+td
+  border: 1px solid #cecfd5
+  padding: 0.8rem
+
+th
+  text-align: left
+  width: max-content
+
+.sr-only
+  display: none

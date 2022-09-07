@@ -1,0 +1,36 @@
+@import '~/styles/mixins'
+
+.backToTopButton
+  width: 7.2rem
+  height: 7.2rem
+  border-radius: 100%
+  font-family: var(--blog-typeface)
+  font-weight: 500
+  font-size: 1.1rem
+  line-height: 128%
+  letter-spacing: 1px
+  text-align: center
+  text-transform: uppercase
+  background: linear-gradient(125deg, var(--color-accent-blue-shade), var(--color-accent-blue))
+  -webkit-text-fill-color: var(--color-background-alt)
+  text-fill-color: var(--color-background-alt)
+  border: none
+  outline: none
+  cursor: pointer
+  position: fixed
+  bottom: 2.8rem
+  right: 2.4rem
+  align-self: flex-end
+  z-index: 8
+
+  @include responsiveness(480p)
+    right: 3.2rem
+  
+  @include responsiveness(640p)
+    right: 4rem
+  
+  @include responsiveness(880p)
+    right: 6.4rem
+
+  @include responsiveness(1200p)
+    right: 9.6vw

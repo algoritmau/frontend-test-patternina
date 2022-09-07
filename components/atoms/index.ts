@@ -1,0 +1,5 @@
+export { BackToTopButton } from './BackToTopButton'
+export { Badge } from './Badge'
+export { Logo } from './Logo'
+export { SocialMediaIcon } from './SocialMediaIcon'
+export { UIIconStar } from './UIIconStar'

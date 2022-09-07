@@ -1,0 +1,17 @@
+@import '~/styles/mixins'
+
+.container
+  background: var(--color-background)
+  max-width: var(--max-width)
+  margin: 0 auto
+  height: 8rem
+  @include flex-centered
+
+.legal
+  color: var(--color-black)
+  text-align: center
+  line-height: 1
+  font-size: 1.5rem
+
+  @include responsiveness(480p)
+    font-size: 1.7rem

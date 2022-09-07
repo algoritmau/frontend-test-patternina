@@ -1,0 +1,128 @@
+@import '~/styles/mixins'
+
+.container
+  max-width: 72rem
+  margin: 0 auto
+
+.header
+  max-width: 72rem
+  margin: 0 auto 8rem auto
+
+.title
+  text-align: center
+  margin-block-end: 2.4rem
+
+.overview
+  color: var(--color-gray-medium)
+  text-align: center
+  font-size: 2.1rem
+  font-size: clamp(1.8rem, 5vw, 2.1rem)
+  font-weight: 500
+  line-height: 144%
+  width: 98%
+  margin: 0 auto
+  margin-block-end: 8rem
+
+  @include responsiveness(640p)
+    width: 96%
+
+.details
+  display: flex
+  flex-direction: column
+  gap: 4rem
+  justify-content: space-between
+
+  @include responsiveness(640p)
+    flex-direction: row
+
+.meta
+  @include flex-centered
+  gap: 1.2rem
+
+  &__avatar
+    @include flex-centered
+    width: 4rem
+    height: 4rem
+
+    &__image
+      width: 100%
+      height: 100%
+      object-fit: cover
+      border-radius: 100%
+  
+  &__misc
+    display: flex
+    flex-direction: column
+    gap: 0.8rem
+  
+  &__author
+    color: var(--color-black)
+    text-transform: uppercase
+    letter-spacing: 0.2rem
+    font-size: 1.2rem
+    font-weight: 900
+    line-height: 100%
+    
+  &__date
+    line-height: 100%
+    font-size: 1.2rem
+    font-weight: 500
+    color: var(--color-gray-medium)
+
+.shareOptions
+  @include flex-centered
+  gap: 1.2rem
+
+  &__item
+    width: 2.4rem
+    height: 2.4rem
+    @include flex-centered
+  
+    // Optical alignment for icons
+    &:nth-of-type(3)
+      margin-block-start: -0.2rem
+
+    &:nth-of-type(4)
+      margin-block-start: 0.2rem
+
+  &__label
+    color: var(--color-gray-600)
+    text-transform: uppercase
+    letter-spacing: 0.08rem
+    font-size: 1.2rem
+    font-weight: 900
+    line-height: 100%
+  
+  &__link
+    @include flex-centered
+    width: 2.4rem
+    height: 2.4rem
+    color: var(--color-gray-500)
+    transition: color 0.2s ease-in-out
+
+    &:hover
+      color: var(--color-gray-600)
+
+.body
+  font-size: 1.7rem
+  font-weight: 400
+  color: var(--color-black)
+  line-height: 176%
+
+.billboard
+  margin-block-end: 6.4rem
+
+  &__image
+    width: 100%
+    height: 100%
+    object-fit: cover
+    margin-block-end: 1.6rem
+  
+  &__caption
+    text-align: center
+    font-size: clamp(1.2rem, 2vw, 1.5rem)
+    font-weight: 500
+    color: var(--color-gray-600)
+
+.paragraph
+  margin-block-end: 3.2rem

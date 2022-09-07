@@ -1,0 +1,106 @@
+@import '~/styles/mixins'
+
+.container
+  background: var(--color-background-alt)
+  border-radius: 5px
+  overflow: hidden
+  box-shadow: 0px 24px 64px 0px #161B2D0D
+
+  &:hover
+    text-decoration: none
+
+    .hero__image
+      transform: scale(1.1)
+    
+    .title
+      text-decoration: underline
+
+.hero
+  height: 19.2rem
+  position: relative
+  margin-block-end: 2.4rem
+  clip-path: ellipse(120% 90% at 28% 8%)
+
+  &__imageContainer
+    height: 100%
+    overflow: hidden
+  
+  &__image
+    width: 100%
+    transition: transform 0.2s ease-in-out
+  
+  &__favoriteButton
+    color: var(--color-gray-600)
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    background: none
+    border: none
+    cursor: pointer
+    outline: none
+    position: absolute
+    right: 1rem
+    top: 1rem
+    padding: 0.4rem
+
+.content
+  display: flex
+  flex-direction: column
+  align-items: space-between
+  padding: 0 2.4rem 2.4rem 2.4rem
+
+.heading
+  margin-block-end: 2.4rem
+
+.title
+  font-family: var(--blog-typeface)
+  font-weight: 900
+  font-size: 2.1rem
+  line-height: 136%
+  color: var(--color-black)
+  margin-block-end: 1.6rem
+
+.overview
+  font-family: var(--blog-typeface)
+  font-weight: 400
+  font-size: 1.6rem
+  line-height: 150%
+  color: var(--color-gray-medium)
+  margin-block-end: 2.4rem
+
+.details
+  @include flex-centered
+  justify-content: space-between
+  color: var(--color-gray-medium)
+  position: relative
+
+  &::before
+    content: ''
+    position: absolute
+    top: -2rem
+    left: 0
+    width: 100%
+    height: 1px
+    background: #f3f7fb
+    z-index: 1
+
+.author
+  @include flex-centered
+  justify-content: space-between
+  gap: 0.8rem
+
+  &__avatar
+    width: 2.4rem
+    height: 2.4rem
+    border-radius: 100%
+
+  &__name
+    font-size: 1.2rem
+    letter-spacing: 0.8px
+    font-weight: 500
+    line-height: 100%
+    text-transform: uppercase
+
+.date
+  text-transform: uppercase
+  font-size: 1.2rem

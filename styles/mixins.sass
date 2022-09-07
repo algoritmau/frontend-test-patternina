@@ -1,0 +1,26 @@
+@mixin flex-centered
+  display: flex
+  align-items: center
+  justify-content: center
+
+@mixin responsiveness($breakpoint)
+  @if $breakpoint == 414p
+    @media screen and (min-width: 414px)
+      @content
+  
+  @if $breakpoint == 480p
+    @media screen and (min-width: 480px)
+      @content
+  
+  @if $breakpoint == 640p
+    @media screen and (min-width: 640px)
+      @content
+  
+  @if $breakpoint == 960p
+    @media screen and (min-width: 960px)
+      @content
+  
+  @if $breakpoint == 1200p
+    @media screen and (min-width: 1200px)
+      @content
+  
