@@ -1,0 +1,49 @@
+@import '~/styles/mixins'
+
+.container
+  -ms-progress-appearance: none
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  border: none
+  background: none
+  font-family: var(--blog-typeface)
+  font-weight: 500
+  border-radius: 6px
+  @include flex-centered
+
+  &:hover
+    cursor: pointer
+
+.small,
+.medium
+  background-color: var(--color-accent-blue)
+  color: var(--color-background-alt)
+  transition: background-color 0.2s ease-in-out
+
+  &:hover
+    background-color: var(--color-accent-blue-shade)
+
+.small
+  padding: 0 1.6rem
+  height: 4.4rem
+  font-size: 1.6rem
+
+.medium
+  padding: 0 2.4rem
+  height: 5.2rem
+  font-size: 1.7rem
+
+.large
+  background-color: var(--color-background)
+  color: var(--color-accent-blue)
+  font-size: 1.7rem
+  transition: all 0.2s ease-in-out
+
+  &:hover
+    background-color: var(--color-accent-blue)
+    color: var(--color-background-alt)
+
+.text
+
+.icon
