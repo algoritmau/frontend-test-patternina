@@ -1,18 +1,16 @@
 import { GetStaticProps, GetStaticPaths } from 'next'
 
 import Head from 'next/head'
+import Link from 'next/link'
 
 import { Layout } from '~/components/templates'
-import { SocialMediaIcon } from '~/components/atoms'
+import { CategoryVialBottle } from '~/components/molecules'
+import { Date, SocialMediaIcon } from '~/components/atoms'
+
+import { getAllArticles, getArticleData } from '~/lib/articles'
 
 import typographyStyles from '~/styles/base/typography.module.sass'
 import articleStyles from '~/styles/components/templates/article.module.sass'
-
-import { getAllArticles, getArticleData } from '@/lib/articles'
-
-import Date from '@/lib/Date'
-import Link from 'next/link'
-import { CategoryVialBottle } from '~/components/molecules'
 
 export default function Article({ article }: { article: Article }) {
   return (
@@ -41,7 +39,8 @@ export default function Article({ article }: { article: Article }) {
                   {article.author.name}
                 </li>
                 <li className={articleStyles.meta__date}>
-                  Published on <Date dateString={article.publishDate} />
+                  Published on{' '}
+                  <Date dateString={article.publishDate} formatStyle="full" />
                 </li>
               </ul>
             </div>

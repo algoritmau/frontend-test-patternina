@@ -15,3 +15,5 @@ export interface Article {
   }
   body: string
 }
+
+export type DateFormatStyle = 'full' | 'concise'

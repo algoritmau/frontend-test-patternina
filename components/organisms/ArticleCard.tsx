@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { Badge, UIIconStar } from '~/components/atoms'
+import { Badge, Date, UIIconStar } from '~/components/atoms'
 
 import { Article } from 'types'
 
@@ -47,7 +47,9 @@ export const ArticleCard = ({ article }: { article: Article }) => (
               {article.author.name}
             </span>
           </li>
-          <li className={articleCardStyles.date}>Date</li>
+          <li className={articleCardStyles.date}>
+            <Date dateString={article.publishDate} formatStyle="concise" />
+          </li>
         </ul>
       </div>
     </a>
