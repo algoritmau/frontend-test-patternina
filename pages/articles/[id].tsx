@@ -12,6 +12,7 @@ import { getAllArticles, getArticleData } from '@/lib/articles'
 
 import Date from '@/lib/Date'
 import Link from 'next/link'
+import { CategoryVialBottle } from '~/components/molecules'
 
 export default function Article({ article }: { article: Article }) {
   return (
@@ -21,6 +22,7 @@ export default function Article({ article }: { article: Article }) {
       </Head>
       <article className={articleStyles.container}>
         <div className={articleStyles.header}>
+          <CategoryVialBottle categories={article.categories} />
           <h1 className={`${typographyStyles.h1} ${articleStyles.title}`}>
             {article.title}
           </h1>
