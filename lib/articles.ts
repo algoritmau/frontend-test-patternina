@@ -2,7 +2,13 @@ export const getAllArticles = async () => {
   const articlesData = await fetch(`${process.env.API_BASE_URL}/articles`)
   const articles = await articlesData.json()
 
-  return articles
+  return articles.sort((a, b) => {
+    if (a.date < b.date) {
+      return 1
+    } else {
+      return -1
+    }
+  })
 }
 
 export const getAllArticlesIds = async () => {
