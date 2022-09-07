@@ -6,7 +6,7 @@ import Head from 'next/head'
 
 import { useSession, signIn, signOut } from 'next-auth/react'
 
-import { getAllArticles } from '@/lib/articles'
+import { getAllArticles } from '~/lib/articles'
 
 import { Layout } from '~/components/templates'
 import { ArticlesGrid } from '~/components/organisms'
