@@ -4,7 +4,15 @@ import { Logo } from '~/components/atoms'
 
 import headerStyles from '~/styles/components/organisms/header.module.sass'
 
-export const Header = ({ isUserLoggedIn }: { isUserLoggedIn: boolean }) => (
+export const Header = ({
+  isUserLoggedIn,
+  signOutCallback,
+  openModalCallback
+}: {
+  isUserLoggedIn: boolean
+  signOutCallback: React.MouseEventHandler<HTMLButtonElement>
+  openModalCallback: React.MouseEventHandler<HTMLButtonElement>
+}) => (
   <header className={headerStyles.container}>
     <nav className={headerStyles.nav}>
       <Link href="/">
@@ -27,7 +35,10 @@ export const Header = ({ isUserLoggedIn }: { isUserLoggedIn: boolean }) => (
           </button>
         </li>
       </ul>
-      <button className={headerStyles.nav__browsingAction__button}>
+      <button
+        className={headerStyles.nav__browsingAction__button}
+        onClick={isUserLoggedIn ? signOutCallback : openModalCallback}
+      >
         {isUserLoggedIn ? 'Sign Out' : 'Sign In'}
       </button>
     </nav>

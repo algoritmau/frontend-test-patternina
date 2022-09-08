@@ -1,0 +1,120 @@
+@import '~/styles/mixins'
+
+.container
+  position: relative
+  background: var(--color-background-alt)
+  box-shadow: 0px 24px 64px rgba(22, 27, 45, 0.05)
+  border-radius: 5px
+  height: 100%
+  padding: 5.6rem 1.6rem 2.4rem 1.6rem
+
+  @include responsiveness(720p)
+    @include flex-centered
+    justify-content: space-between
+    gap: 2.4rem
+    padding: 0
+
+.closeButton
+  border: none
+  background: none
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  position: absolute
+  top: 1.2rem
+  right: 1.2rem
+  padding: 0.8rem
+  cursor: pointer
+  @include flex-centered
+  color: #b1c2d9
+
+.imageContainer
+  display: none
+  @include flex-centered
+  overflow: hidden
+
+  @include responsiveness(720p)
+    display: block
+    align-self: stretch
+    width: 48%
+    clip-path: ellipse(68% 154% at 30% 6%)
+
+.image
+  display: none
+  width: 100%
+  height: 100%
+  object-fit: cover
+
+  @include responsiveness(720p)
+    display: block
+
+.main
+  max-width: 30rem
+  margin: 0 auto
+
+  @include responsiveness(720p)
+    padding: 6.4rem 2.4rem 2.4rem 0
+
+.content
+  @include flex-centered
+  flex-direction: column
+
+.title,
+.description,
+.authHelp
+  text-align: center
+  margin-bottom: 0 auto
+
+.title
+  font-size: clamp(2.8rem, 5vw, 3.6rem)
+  font-weight: 900
+  color: var(--color-black)
+  line-height: 1
+  margin-bottom: 1.2rem
+
+.description
+  line-height: 1
+  font-size: clamp(1.6rem, 3vw, 1.7rem)
+  color: var(--color-gray-700)
+  margin-bottom: 2.4rem
+
+.fieldset
+  height: 5.6rem
+  width: 100%
+  padding: 0
+  border: none
+  margin-bottom: 1.6rem
+
+.input
+  width: 100%
+  height: 5.6rem
+  border-radius: 6px
+  border: 1px solid var(--color-gray-300)
+  outline: none
+  font-family: var(--blog-typeface)
+  font-size: 1.5rem
+  font-weight: 400
+  color: var(--color-gray-600)
+  padding: 0 1.6rem
+
+  &::placeholder
+    color: var(--color-gray-600)
+
+.authHelp
+  font-size: 1.4rem
+  color: var(--color-gray-600)
+  margin-bottom: 3.2rem
+
+.authHelpButton
+  border: none
+  background: none
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  font-family: var(--blog-typeface)
+  font-size: 1.4rem
+  color: var(--color-accent-blue)
+  cursor: pointer
+  text-decoration: underline
+
+
