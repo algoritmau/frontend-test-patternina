@@ -4,7 +4,6 @@ import Head from 'next/head'
 import Link from 'next/link'
 
 import { Layout } from '~/components/templates'
-import { CategoryVialBottle } from '~/components/molecules'
 import { Date, SocialMediaIcon } from '~/components/atoms'
 
 import { getAllArticles, getArticleData } from '~/lib/articles'
@@ -20,7 +19,6 @@ export default function Article({ article }: { article: Article }) {
       </Head>
       <article className={articleStyles.container}>
         <div className={articleStyles.header}>
-          <CategoryVialBottle categories={article.categories} />
           <h1 className={`${typographyStyles.h1} ${articleStyles.title}`}>
             {article.title}
           </h1>

@@ -1,7 +1,6 @@
 export { BackToTopButton } from './BackToTopButton'
 export { Badge } from './Badge'
 export { Button } from './Button'
-export { CategoryPill } from './CategoryPill'
 export { Date } from './Date'
 export { Logo } from './Logo'
 export { SocialMediaIcon } from './SocialMediaIcon'
